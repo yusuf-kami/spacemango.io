@@ -1,0 +1,7 @@
+@import "src/scss/include";
+
+.main {
+  @include from-breakpoint(large) {
+    margin-top: 1em;
+  }
+}
