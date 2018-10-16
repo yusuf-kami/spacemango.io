@@ -16,7 +16,7 @@ server.get('/', (req, res) => {
   const url = 'www.spacemango.io'
   const body = renderToString(sheet.collectStyles(<App />));
   const styles = sheet.getStyleTags();
-  const title = 'Spaceamango';
+  const title = 'Spacemango';
   const description = 'The site for www.spacemango.io.';
 
   res.send(
@@ -31,4 +31,4 @@ server.get('/', (req, res) => {
 });
 
 server.listen(port);
-console.info(`Serving Spaceamango.io at PORT '${port}'.`);
+console.info(`Serving Spacemango.io at PORT '${port}'.`);

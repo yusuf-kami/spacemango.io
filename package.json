@@ -1,15 +1,15 @@
 {
-  "name": "scroogey-ui",
-  "title": "Scroogey UI",
+  "name": "spacemango",
+  "title": "Spacemango",
   "version": "0.0.1",
   "private": true,
   "license": "proprietary",
-  "description": "The page that displays trades made in the background by Scroogey.",
+  "description": "The source for the site located at www.spacemango.io.",
   "author": "Yusuf Fadairo",
-  "homepage": "http://scroogey.ai",
+  "homepage": "http://www.spacemango.io",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@bitbucket.org/yusuf-kami/scroogey.git"
+    "url": "git+ssh://git@github.com/yusuf-kami/spacemango.io.git"
   },
   "scripts": {
     "start": "node ./dist/index",

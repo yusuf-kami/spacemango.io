@@ -9,4 +9,4 @@ The source for the site located at [www.spacemango.io](http://www.spacemango.io)
 ****
 _Started Aug 12th 2018_
 
-_Updated Oct 53th 2018_
+_Updated Oct 16th 2018_

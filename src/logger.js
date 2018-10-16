@@ -1,5 +1,5 @@
 const logger = require('express-pino-logger')({
-  name: 'Scroogey UI',
+  name: 'Spacemango',
   prettyPrint: true,
 })
 
