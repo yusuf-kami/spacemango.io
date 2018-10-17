@@ -16,6 +16,6 @@ const AppContainer = styled.div`
   background: linear-gradient(20deg, rgb(219, 112, 147), #daa357);
 `;
 
-const App = () => <AppContainer className="pa0">Here is some fire 💅!!<Page>And Page</Page></AppContainer>;
+const App = () => <AppContainer className="pa2"><h1>Welcome to Spacemango</h1><Page /></AppContainer>;
 
 export default App;
