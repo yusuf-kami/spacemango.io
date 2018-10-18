@@ -13,8 +13,9 @@
   },
   "scripts": {
     "start": "node ./dist/index",
-    "prestart": "webpack",
-    "dev": "NODE_ENV=development npm start"
+    "build": "webpack",
+    "dev": "NODE_ENV=development npm start",
+    "heroku-postbuild": "npm run build"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",

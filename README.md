@@ -3,7 +3,7 @@ The source for the site located at [www.spacemango.io](http://www.spacemango.io)
 
 ## tl; dr;
 ```
-  npm start
+  npm run build && npm start
 ```
 
 ****
