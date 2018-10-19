@@ -16,7 +16,7 @@ server.get('/', (req, res) => {
   const url = 'www.spacemango.io'
   const body = renderToString(sheet.collectStyles(<App />));
   const styles = sheet.getStyleTags();
-  const title = 'Spacemango';
+  const title = 'Spacemango Inc.';
   const description = 'The site for www.spacemango.io.';
 
   res.send(
