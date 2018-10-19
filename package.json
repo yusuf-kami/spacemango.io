@@ -12,7 +12,7 @@
     "url": "git+ssh://git@github.com/yusuf-kami/spacemango.io.git"
   },
   "scripts": {
-    "start": "node ./dist/index",
+    "start": "PORT=${PORT:-8080} node ./dist/index",
     "build": "webpack",
     "dev": "NODE_ENV=development npm start",
     "heroku-postbuild": "npm run build"
