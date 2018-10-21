@@ -1,15 +1,20 @@
 import express from 'express';
+import favicon from 'serve-favicon';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import App from './components/App';
 import Html from './client/Html';
 import logger from './logger';
 import { ServerStyleSheet } from 'styled-components';
+import path from 'path';
+
 
 const port = process.env.PORT || 3000;
 const server = express();
 
 server.use(logger);
+server.use(favicon(path.join('src', 'client', 'favicon.ico')));
+
 server.get('/', (req, res) => {
   const sheet = new ServerStyleSheet();
 

@@ -39,6 +39,7 @@
     "pino-pretty": "^2.0.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "serve-favicon": "^2.5.0",
     "styled-components": "^2.2.4",
     "tachyons-sass": "^4.9.3",
     "url-loader": "^1.0.1"
