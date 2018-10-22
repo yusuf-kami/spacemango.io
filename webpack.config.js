@@ -44,6 +44,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
+        include: [/src/],
         use: [{
             loader: "css-loader"
           },
@@ -54,7 +55,9 @@ module.exports = {
       },
       {
         test: /\.(ttf|eot|otf|svg|png)$/,
-        loader: 'file-loader'
+        use: [
+          'file-loader?name=[name].[ext]'
+        ]
       },
       {
         test: /\.(woff|woff2)$/,
