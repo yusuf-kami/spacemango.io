@@ -45,8 +45,11 @@ const Html = ({ url, body, title, description, styles }) => `
       <meta name="theme-color" content="#ffffff">
       ${styles}
     </head>
-    <body style="margin:0">
-      <div id="app">${body}</div>
+    <body>
+      <noscript>
+        You need to enable JavaScript to run this app.
+      </noscript>
+      <div id="root">${body}</div>
     </body>
   </html>
 `;

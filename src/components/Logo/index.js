@@ -1,12 +1,17 @@
 import React from 'react';
 import logoSvg from './logo.svg';
-import './style.css';
+import styled from 'styled-components';
 
-const Logo = () => (
-  <div className="centered text-center" tabIndex="0">
-    <img src={logoSvg} className="animate-spin square-20" alt="FancyCars" />
-    <span className='fancy-font margin-small pad-x-small font-x-large'><i>FancyCars</i></span>
+const StyledHeading = styled.h1`
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+`
+
+const LogoContainer = () =>
+  <div className="logo" tabIndex="0">
+    <img src={logoSvg} className="" alt="Spacemango Inc." />
+    <StyledHeading>Spacemango Inc.</StyledHeading>
   </div>
-);
+;
 
-export default Logo;
+export default LogoContainer;

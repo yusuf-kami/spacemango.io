@@ -2,7 +2,7 @@ import express from 'express';
 import favicon from 'serve-favicon';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import App from './components/App';
+import Root from './client/Root';
 import Html from './client/Html';
 import logger from './logger';
 import { ServerStyleSheet } from 'styled-components';
@@ -19,8 +19,9 @@ server.get('/', (req, res) => {
   const sheet = new ServerStyleSheet();
 
   const url = 'www.spacemango.io'
-  const body = renderToString(sheet.collectStyles(<App />));
+  const body = renderToString(sheet.collectStyles(<Root />));
   const styles = sheet.getStyleTags();
+  console.log({ styles });
   const title = 'Spacemango Inc.';
   const description = 'The site for www.spacemango.io.';
 
