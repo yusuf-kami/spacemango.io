@@ -14,6 +14,7 @@ const server = express();
 
 server.use(logger);
 server.use(favicon(path.join('src', 'client', 'favicon.ico')));
+server.use('/static', express.static(path.join('dist', 'static')));
 
 server.get('/', (req, res) => {
   const sheet = new ServerStyleSheet();
@@ -21,7 +22,6 @@ server.get('/', (req, res) => {
   const url = 'www.spacemango.io'
   const body = renderToString(sheet.collectStyles(<Root />));
   const styles = sheet.getStyleTags();
-  console.log({ styles });
   const title = 'Spacemango Inc.';
   const description = 'The site for www.spacemango.io.';
 
@@ -36,5 +36,6 @@ server.get('/', (req, res) => {
   );
 });
 
-server.listen(port);
-console.info(`Serving Spacemango.io at PORT '${port}'.`);
+server.listen(port, () => {
+  console.info(`Serving Spacemango.io at PORT '${port}'.`);
+});

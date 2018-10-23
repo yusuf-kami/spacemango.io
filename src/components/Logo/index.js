@@ -1,8 +1,8 @@
 import React from 'react';
-import logoSvg from './logo.png';
+import logoSvg from './logo.svg';
 import styled from 'styled-components';
 
-const StyleContainer = styled.div`
+const StyledContainer = styled.div`
   text-align: center;
 `
 
@@ -12,10 +12,10 @@ const StyledHeading = styled.h1`
 `
 
 const LogoContainer = () =>
-  <StyleContainer tabIndex="0">
-    <img src={logoSvg} alt="Spacemango Inc." />
+  <StyledContainer tabIndex="0" alt="Spacemango Inc.">
+    <img src={logoSvg} alt="Logo for Spacemango Inc."/>
     <StyledHeading>Spacemango Inc.</StyledHeading>
-  </StyleContainer>
+  </StyledContainer>
 ;
 
 export default LogoContainer;
