@@ -1,0 +1,17 @@
+@keyframes appear-from-bottom {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-appear {
+  animation-name: appear-from-bottom;
+  animation-duration: 2s;
+  animation-delay: 1.5s;
+}
