@@ -1,25 +1,12 @@
 import React from 'react';
 import logoSvg from './logo.svg';
-import styled from 'styled-components';
-
-const CenteredContainer = styled.div`
-  text-align: center;
-`
-
-const StyledHeading = styled.h1`
-  font-family: 'Lato', sans-serif;
-  color: #fff;
-`
-
-const StyledImage = styled.img`
-  width: 100px;
-`
+import './index.css';
 
 const LogoContainer = () =>
-  <CenteredContainer tabIndex="0" alt="Spacemango Inc.">
-    <StyledImage src={logoSvg} alt="Logo for Spacemango Inc."/>
-    <StyledHeading>Spacemango Inc.</StyledHeading>
-  </CenteredContainer>
+  <div className="centered" tabIndex="0" alt="Spacemango Inc.">
+    <img className="img" src={logoSvg} alt="Logo for Spacemango Inc."/>
+    <h1 className="h1">Spacemango Inc.</h1>
+  </div>
 ;
 
 export default LogoContainer;

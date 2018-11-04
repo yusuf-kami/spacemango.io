@@ -1,7 +1,6 @@
 {
-  "name": "spacemango",
-  "title": "Spacemango",
-  "version": "0.0.1",
+  "name": "spacemango.io",
+  "version": "0.1.0",
   "private": true,
   "license": "proprietary",
   "description": "The source for the site located at www.spacemango.io.",
@@ -11,37 +10,24 @@
     "type": "git",
     "url": "git+ssh://git@github.com/yusuf-kami/spacemango.io.git"
   },
-  "scripts": {
-    "start": "PORT=${PORT:-8080} node ./dist/index",
-    "build": "webpack",
-    "dev": "NODE_ENV=development npm start",
-    "heroku-postbuild": "npm run build"
-  },
-  "devDependencies": {
-    "babel-core": "^6.10.4",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.11.1",
-    "webpack": "^3.8.1",
-    "webpack-node-externals": "^1.2.0",
-    "css-loader": "^0.28.11",
-    "node-sass": "^4.8.3",
-    "sass-loader": "^6.0.7",
-    "style-loader": "^0.20.3"
-  },
   "dependencies": {
-    "babel-preset-es2015": "^6.13.2",
-    "babel-preset-react": "^6.11.1",
-    "express": "^4.14.0",
-    "express-pino-logger": "^4.0.0",
-    "file-loader": "^1.1.11",
-    "pino": "^5.0.1",
-    "pino-pretty": "^2.0.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "serve-favicon": "^2.5.0",
-    "styled-components": "^2.2.4",
-    "tachyons-sass": "^4.9.3",
-    "url-loader": "^1.0.1"
-  }
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-scripts": "2.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

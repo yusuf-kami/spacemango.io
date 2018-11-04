@@ -1,5 +1,0 @@
-{
-  "events": {
-    "restart": "osascript -e 'display notification \"server restarted\" with title \"nodemon\"'"
-  }
-}

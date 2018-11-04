@@ -18,5 +18,18 @@ body {
 .animate-appear {
   animation-name: appear-from-bottom;
   animation-duration: 2s;
-  animation-delay: 1.5s;
+  animation-delay: 0s;
+}
+
+.centered-link {
+  color: lightgray;
+  font-size: 1.2em;
+  font-weight: 100;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+}
+
+.center {
+  text-align: center;
 }
