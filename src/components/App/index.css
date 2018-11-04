@@ -1,9 +1,15 @@
 .app {
   display: flex;
+}
+
+.space-bg {
+  background-color: rgb(25, 31, 46);
+}
+
+.flex-centered {
+  display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgb(25, 31, 46);
 }
