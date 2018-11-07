@@ -95,7 +95,7 @@
   animation-timing-function: linear;
 }
 
-.gitter:focus,
-.gitter:hover {
+.jitter:focus,
+.jitter:hover {
   animation-name: none;
 }
