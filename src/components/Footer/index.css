@@ -1,0 +1,16 @@
+.bg-white {
+  background-color: white;
+  opacity: 0.95;
+}
+
+.tc {
+  text-align: center;
+}
+
+.white {
+  color: white;
+}
+
+.pa2 {
+  padding: 2em;
+}
