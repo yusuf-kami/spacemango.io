@@ -7,6 +7,24 @@
   }
 }
 
+@keyframes sway {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(2px, 2px);
+  }
+  40% {
+    transform: translate(4px, 0);
+  }
+  80% {
+    transform: translate(2px, 2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+
+}
 @keyframes space-shake {
   0% {
     transform: translate(2px, 1px) rotate(0deg);
@@ -349,101 +367,122 @@
 .static-star {
   left: 89.7423%;
   top: 14.8172%;
+  -webkit-animation: sway 2368ms ease-in-out infinite;
+          animation: sway 2368ms ease-in-out infinite;
 }
 
 .static-star:nth-child(2) {
   left: 65.8895%;
   top: 22.8678%;
+  animation-delay: 598ms;
 }
 
 .static-star:nth-child(3) {
   left: 23.0757%;
   top: 91.8545%;
+  animation-delay: 57ms;
 }
 
 .static-star:nth-child(4) {
   left: 15.2961%;
   top: 58.0573%;
+  animation-delay: 961ms;
 }
 
 .static-star:nth-child(5) {
   left: 42.7679%;
   top: 89.9655%;
+  animation-delay: 57ms;
 }
 
 .static-star:nth-child(6) {
   left: 5.9895%;
   top: 72.9128%;
+  animation-delay: 918ms;
 }
 
 .static-star:nth-child(7) {
   left: 28.8812%;
   top: 30.0459%;
+  animation-delay: 459ms;
 }
 
 .static-star:nth-child(8) {
   left: 67.6390%;
   top: 20.1657%;
+  animation-delay: 157ms;
 }
 
 .static-star:nth-child(9) {
   left: 44.0423%;
   top: 17.2183%;
+  animation-delay: 213ms;
 }
 
 .static-star:nth-child(10) {
   left: 50.8073%;
   top: 34.3190%;
+  animation-delay: 310ms;
 }
 
 .static-star:nth-child(11) {
   left: 40.1368%;
   top: 49.4950%;
+  animation-delay: 49ms;
 }
 
 .static-star:nth-child(12) {
   left: 44.9769%;
   top: 77.0784%;
+  animation-delay: 78ms;
 }
 
 .static-star:nth-child(13) {
   left: 32.5895%;
   top: 72.9806%;
+  animation-delay: 86ms;
 }
 
 .static-star:nth-child(14) {
   left: 26.0195%;
   top: 89.1807%;
+  animation-delay: 1107ms;
 }
 
 .static-star:nth-child(15) {
   left: 10.1856%;
   top: 85.2348%;
+  animation-delay: 234ms;
 }
 
 .static-star:nth-child(16) {
   left: 55.0580%;
   top: 87.0304%;
+  animation-delay: 304ms;
 }
 
 .static-star:nth-child(17) {
   left: 34.7401%;
   top: 79.9173%;
+  animation-delay: 173ms;
 }
 
 .static-star:nth-child(18) {
   left: 69.7931%;
   top: 83.5866%;
+  animation-delay: 566ms;
 }
 
 .static-star:nth-child(19) {
   left: 66.6797%;
   top: 8.3189%;
+  animation-delay: 319ms;
 }
 
 .static-star:nth-child(30) {
   left: 37.4422%;
   top: 22.1935%;
+  animation-delay: 135ms;
 }
 
 .shooting-star {
