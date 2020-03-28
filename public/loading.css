@@ -108,7 +108,13 @@
   height: 100%;
   position: absolute;
 
-  transform: rotate(135deg) scaleY(1.6);
+  transform: rotate(135deg) scaleY(1.9);
+}
+
+@media only screen and (max-width: 600px) {
+  .loading-container {
+    transform: rotate(135deg) scale(1.9, 1.1);
+  }
 }
 
 .loading-img-container {
