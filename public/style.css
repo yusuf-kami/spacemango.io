@@ -50,3 +50,66 @@ body {
 .flex {
   display: flex;
 }
+
+@keyframes label-in {
+  from {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes label-out {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.label-in {
+  -webkit-animation: label-in 2s ease-in;
+          animation: label-in 2s ease-in;
+}
+
+.label-out {
+  animation-fill-mode: forwards !important;
+  -webkit-animation: label-out 2s ease-out;
+          animation: label-out 2s ease-out;
+}
+
+.appear {
+  -webkit-animation: appear 2.2s ease-out;
+          animation: appear 2.2s ease-out;
+}
+
+.disappear {
+  position: absolute !important;
+  animation-fill-mode: forwards !important;
+  -webkit-animation: disappear 2.2s ease-out;
+          animation: disappear 2.2s ease-out;
+}

@@ -10,9 +10,11 @@
 @keyframes comet-out {
   from {
     transform: translate(0%, 0%);
+    opacity: 1;
   }
   to {
     transform: translate(-1000%, 1000%);
+    opacity: 0;
   }
 }
 
@@ -21,13 +23,13 @@
     transform: translate(0, 0);
   }
   25% {
-    transform: translate(2px, 0px);
+    transform: translate(1px, 0px);
   }
   50% {
-    transform: translate(2px, 2px);
+    transform: translate(1px, 1px);
   }
   75% {
-    transform: translate(0px, 2px);
+    transform: translate(0px, 1px);
   }
 }
 
@@ -132,22 +134,19 @@
 }
 
 .comet-in {
-  animation-name: comet-in;
-  animation-duration: 1.5s;
-  animation-timing-function: ease;
+  -webkit-animation: comet-in 1.5s ease;
+          animation: comet-in 1.5s ease;
 }
 
 .comet-out {
-  animation-name: comet-out;
-  animation-duration: 1.5s;
-  animation-timing-function: ease;
+  animation-fill-mode: forwards !important;
+  -webkit-animation: comet-out 2s ease;
+          animation: comet-out 2s ease;
 }
 
 .jitter {
-  animation-name: space-shake;
-  animation-duration: 0.8s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  -webkit-animation: space-shake 0.3s linear infinite;
+          animation: space-shake 0.3s linear infinite;
 }
 
 .jitter:focus,
@@ -170,13 +169,12 @@
   position: absolute;
   border-radius: 100%;
   background: linear-gradient(-45deg, white, rgba(0, 0, 255, 0));
-  -webkit-filter: drop-shadow(0 0 6px white);
-          filter: drop-shadow(0 0 6px white);
 }
 
 .static-star {
   left: 89.7423%;
   top: 14.8172%;
+  animation-duration: 368ms;
   -webkit-animation: sway 2368ms ease-in-out infinite;
           animation: sway 2368ms ease-in-out infinite;
 }
@@ -184,115 +182,115 @@
 .static-star:nth-child(2) {
   left: 65.8895%;
   top: 22.8678%;
-  animation-delay: 598ms;
+  animation-duration: 1950ms;
 }
 
 .static-star:nth-child(3) {
   left: 23.0757%;
   top: 91.8545%;
-  animation-delay: 57ms;
+  animation-duration: 423ms;
 }
 
 .static-star:nth-child(4) {
   left: 15.2961%;
   top: 58.0573%;
-  animation-delay: 961ms;
+  animation-duration: 1598ms;
 }
 
 .static-star:nth-child(5) {
   left: 42.7679%;
   top: 89.9655%;
-  animation-delay: 57ms;
+  animation-duration: 757ms;
 }
 
 .static-star:nth-child(6) {
   left: 5.9895%;
   top: 72.9128%;
-  animation-delay: 918ms;
+  animation-duration: 2961ms;
 }
 
 .static-star:nth-child(7) {
   left: 28.8812%;
   top: 30.0459%;
-  animation-delay: 459ms;
+  animation-duration: 1679ms;
 }
 
 .static-star:nth-child(8) {
   left: 67.6390%;
   top: 20.1657%;
-  animation-delay: 157ms;
+  animation-duration: 895ms;
 }
 
 .static-star:nth-child(9) {
   left: 44.0423%;
   top: 17.2183%;
-  animation-delay: 213ms;
+  animation-duration: 2195ms;
 }
 
 .static-star:nth-child(10) {
   left: 50.8073%;
   top: 34.3190%;
-  animation-delay: 310ms;
+  animation-duration: 1812ms;
 }
 
 .static-star:nth-child(11) {
   left: 40.1368%;
   top: 49.4950%;
-  animation-delay: 49ms;
+  animation-duration: 1390ms;
 }
 
 .static-star:nth-child(12) {
   left: 44.9769%;
   top: 77.0784%;
-  animation-delay: 78ms;
+  animation-duration: 1195ms;
 }
 
 .static-star:nth-child(13) {
   left: 32.5895%;
   top: 72.9806%;
-  animation-delay: 86ms;
+  animation-duration: 1423ms;
 }
 
 .static-star:nth-child(14) {
   left: 26.0195%;
   top: 89.1807%;
-  animation-delay: 1107ms;
+  animation-duration: 1073ms;
 }
 
 .static-star:nth-child(15) {
   left: 10.1856%;
   top: 85.2348%;
-  animation-delay: 234ms;
+  animation-duration: 1368ms;
 }
 
 .static-star:nth-child(16) {
   left: 55.0580%;
   top: 87.0304%;
-  animation-delay: 304ms;
+  animation-duration: 1769ms;
 }
 
 .static-star:nth-child(17) {
   left: 34.7401%;
   top: 79.9173%;
-  animation-delay: 173ms;
+  animation-duration: 1595ms;
 }
 
 .static-star:nth-child(18) {
   left: 69.7931%;
   top: 83.5866%;
-  animation-delay: 566ms;
+  animation-duration: 1973ms;
 }
 
 .static-star:nth-child(19) {
   left: 66.6797%;
   top: 8.3189%;
-  animation-delay: 319ms;
+  animation-duration: 1566ms;
 }
 
 .static-star:nth-child(30) {
   left: 37.4422%;
   top: 22.1935%;
-  animation-delay: 135ms;
+  animation-duration: 2189ms;
 }
 
 .shooting-star:nth-child(1) {
@@ -381,8 +379,8 @@
 .shooting-star:nth-child(13) {
   top: 55%;
   animation-delay: 517ms;
-  -webkit-animation: tail 1423mc ease-in-out infinite, shooting 1423mc ease-in-out infinite;
-          animation: tail 1423mc ease-in-out infinite, shooting 1423mc ease-in-out infinite;
+  -webkit-animation: tail 1423ms ease-in-out infinite, shooting 1423ms ease-in-out infinite;
+          animation: tail 1423ms ease-in-out infinite, shooting 1423ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(14) {

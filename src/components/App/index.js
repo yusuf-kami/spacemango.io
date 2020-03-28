@@ -4,7 +4,7 @@ import Footer from '../Footer'
 import Container from '../Container';
 import './index.css';
 
-const LOADING_ANIMATION_DELAY = 2000;
+const LOADING_ANIMATION_DELAY = 2500;
 
 class App extends React.Component {
   render() {
@@ -22,9 +22,18 @@ class App extends React.Component {
     console.debug("Timeout started!");
     setTimeout(() => {
     // document.getElementById('root').style.cssText = "";
-    // Perform animation to lift loading background
-    // Perform animation to send loading logo away
-    // perform animation to set logo to header
+
+    // TODO: make loading screen disappear
+    // document.getElementById('loading-comet').classList.remove("comet-in");
+    // document.getElementById('loading-comet').classList.add("comet-out");
+
+    // document.getElementById('loading-label').classList.remove("label-in");
+    // document.getElementById('loading-label').classList.add("label-out");
+
+    // document.getElementById('loading').classList.add("disappear");
+
+    // TODO: perform animation to set up header and Logo
+    // TODO: remove opaque loading elements after another timeout
     console.debug("Timeout complete!");
     }, LOADING_ANIMATION_DELAY);
   }
