@@ -45,3 +45,7 @@ body {
 .centered {
   margin: auto;
 }
+
+.flex {
+  display: flex;
+}
