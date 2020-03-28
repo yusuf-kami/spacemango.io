@@ -1,4 +1,4 @@
-@keyframes comet-top-right {
+@keyframes comet-in {
   from {
     transform: translate(1000%, -1000%);
   }
@@ -7,24 +7,30 @@
   }
 }
 
+@keyframes comet-out {
+  from {
+    transform: translate(0%, 0%);
+  }
+  to {
+    transform: translate(-1000%, 1000%);
+  }
+}
+
 @keyframes sway {
   0% {
     transform: translate(0, 0);
   }
-  20% {
+  25% {
+    transform: translate(2px, 0px);
+  }
+  50% {
     transform: translate(2px, 2px);
   }
-  40% {
-    transform: translate(4px, 0);
+  75% {
+    transform: translate(0px, 2px);
   }
-  80% {
-    transform: translate(2px, 2px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-
 }
+
 @keyframes space-shake {
   0% {
     transform: translate(2px, 1px) rotate(0deg);
@@ -73,223 +79,12 @@
   }
 }
 
-@keyframes shooting-1 {
+@keyframes shooting {
   0% {
-    left: 100%;
-    top: 9%
-  }
-  100% {
-    left: 9%;
-    top: 100%;
-  }
-}
-
-@keyframes shooting-2 {
-  0% {
-    left: 100%;
-    top: 14%
-  }
-  100% {
-    left: 14%;
-    top: 100%;
-  }
-}
-
-@keyframes shooting-3 {
-  0% {
-    left: 100%;
-    top: 15%
-  }
-  100% {
-    left: 15%;
-    top: 100%;
-  }
-}
-
-@keyframes shooting-4 {
-  0% {
-    left: 100%;
-    top: 22%
-  }
-  100% {
-    left: 22%;
-    top: 100%;
-  }
-}
-
-@keyframes shooting-5 {
-  0% {
-    left: 100%;
-    top: 23%
-  }
-  100% {
-    left: 23%;
-    top: 100%;
-  }
-}
-
-@keyframes shooting-6 {
-  0% {
-    left: 100%;
-    top: 1%
-  }
-  100% {
-    left: 1%;
-    top: 100%;
-  }
-}
-
-@keyframes shooting-7 {
-  0% {
-    left: 100%;
-    top: 15%
-  }
-  100% {
-    left: 15%;
-    top: 100%;
-  }
-}
-
-@keyframes shooting-8 {
-  0% {
-    left: 100%;
-    top: 58%
-  }
-  100% {
-    left: 58%;
-    top: 100%;
-  }
-}
-
-@keyframes shooting-9 {
-  0% {
-    left: 100%;
-    top: 42%
-  }
-  100% {
-    left: 42%;
-    top: 100%;
-  }
-}
-
-@keyframes shooting-10 {
-  0% {
-    left: 100%;
-    top: 89%
-  }
-  100% {
-    left: 89%;
-    top: 100%;
-  }
-}
-
-@keyframes shooting-11 {
-  0% {
-    left: 5%;
-    top: 0%
-  }
-  100% {
     left: 0%;
-    top: 5%;
-  }
-}
-
-@keyframes shooting-12 {
-  0% {
-    left: 72%;
-    top: 0%
   }
   100% {
-    left: 0%;
-    top: 72%;
-  }
-}
-
-@keyframes shooting-13 {
-  0% {
-    left: 28%;
-    top: 0%
-  }
-  100% {
-    left: 0%;
-    top: 28%;
-  }
-}
-
-@keyframes shooting-14 {
-  0% {
-    left: 30%;
-    top: 0%
-  }
-  100% {
-    left: 0%;
-    top: 30%;
-  }
-}
-
-@keyframes shooting-15 {
-  0% {
-    left: 67%;
-    top: 0%
-  }
-  100% {
-    left: 0%;
-    top: 67%;
-  }
-}
-
-@keyframes shooting-16 {
-  0% {
-    left: 20%;
-    top: 0%
-  }
-  100% {
-    left: 0%;
-    top: 20%;
-  }
-}
-
-@keyframes shooting-17 {
-  0% {
-    left: 44%;
-    top: 0%
-  }
-  100% {
-    left: 0%;
-    top: 44%;
-  }
-}
-
-@keyframes shooting-18 {
-  0% {
-    left: 17%;
-    top: 0%
-  }
-  100% {
-    left: 0%;
-    top: 17%;
-  }
-}
-
-@keyframes shooting-19 {
-  0% {
-    left: 50%;
-    top: 0%
-  }
-  100% {
-    left: 0%;
-    top: 50%;
-  }
-}
-
-@keyframes shooting-20 {
-  0% {
-    left: 34%;
-    top: 0%
-  }
-  100% {
-    left: 0%;
-    top: 34%;
+    left: 100%;
   }
 }
 
@@ -299,17 +94,26 @@
   text-align: center;
 }
 
-.loading-container {
+.loading-center {
   width: 100%;
   height: 100%;
-  z-index: 200;
   position: absolute;
+}
+
+.loading-container {
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  transform: rotate(135deg) scaleY(1.6);
 }
 
 .loading-img-container {
   width: 100px;
   height: 100px;
   margin: auto;
+  z-index: 300;
 }
 
 .loading-info-container {
@@ -327,8 +131,14 @@
   z-index: 99999;
 }
 
-.animate-comet {
-  animation-name: comet-top-right;
+.comet-in {
+  animation-name: comet-in;
+  animation-duration: 1.5s;
+  animation-timing-function: ease;
+}
+
+.comet-out {
+  animation-name: comet-out;
   animation-duration: 1.5s;
   animation-timing-function: ease;
 }
@@ -485,125 +295,141 @@
   animation-delay: 135ms;
 }
 
-.shooting-star {
-  transform: rotate(135deg);
-}
-
 .shooting-star:nth-child(1) {
-  -webkit-animation: tail 1368ms ease-in-out infinite, shooting-1 1368ms ease-in-out infinite;
-          animation: tail 1368ms ease-in-out infinite, shooting-1 1368ms ease-in-out infinite;
+  top: 100%;
+  -webkit-animation: tail 368ms ease-in-out infinite, shooting 368ms ease-in-out infinite;
+          animation: tail 368ms ease-in-out infinite, shooting 368ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(2) {
+  top: 5%;
   animation-delay: 950ms;
-  -webkit-animation: tail 1950ms ease-in-out infinite, shooting-2 1950ms ease-in-out infinite;
-          animation: tail 1950ms ease-in-out infinite, shooting-2 1950ms ease-in-out infinite;
+  -webkit-animation: tail 1950ms ease-in-out infinite, shooting 1900ms ease-in-out infinite;
+          animation: tail 1900ms ease-in-out infinite, shooting 1900ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(3) {
+  top: 10%;
   animation-delay: 784ms;
-  -webkit-animation: tail 423ms ease-in-out infinite, shooting-3 423ms ease-in-out infinite;
-          animation: tail 423ms ease-in-out infinite, shooting-3 423ms ease-in-out infinite;
+  -webkit-animation: tail 423ms ease-in-out infinite, shooting 423ms ease-in-out infinite;
+          animation: tail 423ms ease-in-out infinite, shooting 423ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(4) {
+  top: 15%;
   animation-delay: 172ms;
-  -webkit-animation: tail 1895ms ease-in-out infinite, shooting-4 1895ms ease-in-out infinite;
-          animation: tail 1895ms ease-in-out infinite, shooting-4 1895ms ease-in-out infinite;
+  -webkit-animation: tail 1598ms ease-in-out infinite, shooting 1598ms ease-in-out infinite;
+          animation: tail 1598ms ease-in-out infinite, shooting 1598ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(5) {
+  top: 15%;
   animation-delay: 678ms;
-  -webkit-animation: tail 757ms ease-in-out infinite, shooting-5 757ms ease-in-out infinite;
-          animation: tail 757ms ease-in-out infinite, shooting-5 757ms ease-in-out infinite;
+  -webkit-animation: tail 757ms ease-in-out infinite, shooting 757ms ease-in-out infinite;
+          animation: tail 757ms ease-in-out infinite, shooting 757ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(6) {
+  top: 20%;
   animation-delay: 545ms;
-  -webkit-animation: tail 2961ms ease-in-out infinite, shooting-6 2961ms ease-in-out infinite;
-          animation: tail 2961ms ease-in-out infinite, shooting-6 2961ms ease-in-out infinite;
+  -webkit-animation: tail 2961ms ease-in-out infinite, shooting 2961ms ease-in-out infinite;
+          animation: tail 2961ms ease-in-out infinite, shooting 2961ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(7) {
+  top: 25%;
   animation-delay: 573ms;
-  -webkit-animation: tail 1679ms ease-in-out infinite, shooting-7 1679ms ease-in-out infinite;
-          animation: tail 1679ms ease-in-out infinite, shooting-7 1679ms ease-in-out infinite;
+  -webkit-animation: tail 1679ms ease-in-out infinite, shooting 1679ms ease-in-out infinite;
+          animation: tail 1679ms ease-in-out infinite, shooting 1679ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(8) {
+  top: 30%;
   animation-delay: 655ms;
-  -webkit-animation: tail 1895ms ease-in-out infinite, shooting-8 1895ms ease-in-out infinite;
-          animation: tail 1895ms ease-in-out infinite, shooting-8 1895ms ease-in-out infinite;
+  -webkit-animation: tail 895ms ease-in-out infinite, shooting 895ms ease-in-out infinite;
+          animation: tail 895ms ease-in-out infinite, shooting 895ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(9) {
+  top: 35%;
   animation-delay: 128ms;
-  -webkit-animation: tail 1895ms ease-in-out infinite, shooting-9 1895ms ease-in-out infinite;
-          animation: tail 1895ms ease-in-out infinite, shooting-9 1895ms ease-in-out infinite;
+  -webkit-animation: tail 2195ms ease-in-out infinite, shooting 2195ms ease-in-out infinite;
+          animation: tail 2195ms ease-in-out infinite, shooting 2195ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(10) {
+  top: 40%;
   animation-delay: 93ms;
-  -webkit-animation: tail 1812ms ease-in-out infinite, shooting-10 1812ms ease-in-out infinite;
-          animation: tail 1812ms ease-in-out infinite, shooting-10 1812ms ease-in-out infinite;
+  -webkit-animation: tail 1812ms ease-in-out infinite, shooting 1812ms ease-in-out infinite;
+          animation: tail 1812ms ease-in-out infinite, shooting 1812ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(11) {
+  top: 45%;
   animation-delay: 459ms;
-  -webkit-animation: tail 1390ms ease-in-out infinite, shooting-11 1390ms ease-in-out infinite;
-          animation: tail 1390ms ease-in-out infinite, shooting-11 1390ms ease-in-out infinite;
+  -webkit-animation: tail 1390ms ease-in-out infinite, shooting 1390ms ease-in-out infinite;
+          animation: tail 1390ms ease-in-out infinite, shooting 1390ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(12) {
+  top: 50%;
   animation-delay: 93ms;
-  -webkit-animation: tail 1895ms ease-in-out infinite, shooting-12 1895ms ease-in-out infinite;
-          animation: tail 1895ms ease-in-out infinite, shooting-12 1895ms ease-in-out infinite;
+  -webkit-animation: tail 1195ms ease-in-out infinite, shooting 1195ms ease-in-out infinite;
+          animation: tail 1195ms ease-in-out infinite, shooting 1195ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(13) {
+  top: 55%;
   animation-delay: 517ms;
-  -webkit-animation: tail 1423mc ease-in-out infinite, shooting-13 1423mc ease-in-out infinite;
-          animation: tail 1423mc ease-in-out infinite, shooting-13 1423mc ease-in-out infinite;
+  -webkit-animation: tail 1423mc ease-in-out infinite, shooting 1423mc ease-in-out infinite;
+          animation: tail 1423mc ease-in-out infinite, shooting 1423mc ease-in-out infinite;
 }
 
 .shooting-star:nth-child(14) {
+  top: 60%;
   animation-delay: 283ms;
-  -webkit-animation: tail 1073ms ease-in-out infinite, shooting-14 1073ms ease-in-out infinite;
-          animation: tail 1073ms ease-in-out infinite, shooting-14 1073ms ease-in-out infinite;
+  -webkit-animation: tail 1073ms ease-in-out infinite, shooting 1073ms ease-in-out infinite;
+          animation: tail 1073ms ease-in-out infinite, shooting 1073ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(15) {
+  top: 65%;
   animation-delay: 310ms;
-  -webkit-animation: tail 1368ms ease-in-out infinite, shooting-15 1368ms ease-in-out infinite;
-          animation: tail 1368ms ease-in-out infinite, shooting-15 1368ms ease-in-out infinite;
+  -webkit-animation: tail 1368ms ease-in-out infinite, shooting 1368ms ease-in-out infinite;
+          animation: tail 1368ms ease-in-out infinite, shooting 1368ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(16) {
+  top: 70%;
   animation-delay: 450ms;
-  -webkit-animation: tail 1769ms ease-in-out infinite, shooting-16 1769ms ease-in-out infinite;
-          animation: tail 1769ms ease-in-out infinite, shooting-16 1769ms ease-in-out infinite;
+  -webkit-animation: tail 1769ms ease-in-out infinite, shooting 1769ms ease-in-out infinite;
+          animation: tail 1769ms ease-in-out infinite, shooting 1769ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(17) {
+  top: 75%;
   animation-delay: 784ms;
-  -webkit-animation: tail 1595ms ease-in-out infinite, shooting-17 1595ms ease-in-out infinite;
-          animation: tail 1595ms ease-in-out infinite, shooting-17 1595ms ease-in-out infinite;
+  -webkit-animation: tail 1595ms ease-in-out infinite, shooting 1595ms ease-in-out infinite;
+          animation: tail 1595ms ease-in-out infinite, shooting 1595ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(18) {
+  top: 80%;
   animation-delay: 701ms;
-  -webkit-animation: tail 1973ms ease-in-out infinite, shooting-18 1973ms ease-in-out infinite;
-          animation: tail 1973ms ease-in-out infinite, shooting-18 1973ms ease-in-out infinite;
+  -webkit-animation: tail 1973ms ease-in-out infinite, shooting 1973ms ease-in-out infinite;
+          animation: tail 1973ms ease-in-out infinite, shooting 1973ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(19) {
+  top: 85%;
   animation-delay: 311ms;
-  -webkit-animation: tail 1566ms ease-in-out infinite, shooting-19 1566ms ease-in-out infinite;
-          animation: tail 1566ms ease-in-out infinite, shooting-19 1566ms ease-in-out infinite;
+  -webkit-animation: tail 1566ms ease-in-out infinite, shooting 1566ms ease-in-out infinite;
+          animation: tail 1566ms ease-in-out infinite, shooting 1566ms ease-in-out infinite;
 }
 
 .shooting-star:nth-child(20) {
+  top: 90%;
   animation-delay: 697ms;
-  -webkit-animation: tail 2189ms ease-in-out infinite, shooting-20 2189ms ease-in-out infinite;
-          animation: tail 2189ms ease-in-out infinite, shooting-20 2189ms ease-in-out infinite;
+  -webkit-animation: tail 2189ms ease-in-out infinite, shooting 2189ms ease-in-out infinite;
+          animation: tail 2189ms ease-in-out infinite, shooting 2189ms ease-in-out infinite;
 }
