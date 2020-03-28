@@ -1,14 +1,8 @@
-body {
-  margin: 0px;
-  padding: 0px;
-}
-
 @keyframes appear-from-bottom {
   from {
     transform: translateY(200%);
     opacity: 0;
   }
-
   to {
     transform: translateY(0);
     opacity: 1;
@@ -19,12 +13,4 @@ body {
   animation-name: appear-from-bottom;
   animation-duration: 2s;
   animation-delay: 0s;
-}
-
-.center {
-  text-align: center;
-}
-
-.flex-content {
-  flex-basis: content;
 }
