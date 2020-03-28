@@ -486,7 +486,7 @@
 }
 
 .shooting-star {
-  transform: rotate(-45deg);
+  transform: rotate(135deg);
 }
 
 .shooting-star:nth-child(1) {
