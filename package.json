@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "license": "proprietary",
-  "description": "The source for the site located at www.spacemango.io.",
+  "description": "Personalized software and consulting company that provides solutions that transform the world into a more technology-enabled place that enables seamless and frictionless automation of all interactions.",
   "author": "Yusuf Fadairo",
-  "homepage": "http://www.spacemango.io",
+  "homepage": "https://www.spacemango.io",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/yusuf-kami/spacemango.io.git"
