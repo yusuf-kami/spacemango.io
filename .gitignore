@@ -4,6 +4,5 @@ npm-debug.log
 .idea/
 .vscode/
 *.swp
-package-lock.json
 *.log
 dist
