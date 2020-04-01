@@ -14,7 +14,7 @@ You can build the application with the following commands:
 You can then run the application locally using the command `npm start`. This will create a React webpage at `http://localhost:3000/`.
 If you would like to use `yarn` you can use the following command to install the dependencies of the application:
 ```
- yarn --ignore-engines
+  yarn --ignore-engines
 ```
 
 ## Deployment
@@ -24,4 +24,4 @@ You can deploy to `heroku` by running the command `git push heroku`.
 ****
 _Started Aug 12th 2018_
 
-_Updated Mar 28th 2020_
+_Updated Apr 1st 2020_
