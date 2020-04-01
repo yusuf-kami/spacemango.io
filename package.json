@@ -20,8 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "./node_modules/.bin/serve -s build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,6 +32,7 @@
     "not op_mini all"
   ],
   "engines": {
-    "node": "8.11.x"
+    "node": "8.11.x",
+    "npm": "6.4.x"
   }
 }
