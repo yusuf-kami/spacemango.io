@@ -170,7 +170,7 @@
 .star {
   z-index: 200;
   width: 2px;
-  height: 2px;
+  height: 1px;
   position: absolute;
   border-radius: 100%;
   background: linear-gradient(-45deg, white, rgba(0, 0, 255, 0));
