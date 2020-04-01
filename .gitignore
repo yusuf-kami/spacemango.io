@@ -6,3 +6,4 @@ npm-debug.log
 *.swp
 *.log
 dist
+package-lock.json
