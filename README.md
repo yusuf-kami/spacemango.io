@@ -23,5 +23,3 @@ You can deploy to `heroku` by running the command `git push heroku`.
 
 ****
 _Started Aug 12th 2018_
-
-_Updated Apr 1st 2020_
