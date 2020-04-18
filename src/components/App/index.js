@@ -34,7 +34,7 @@ class App extends React.Component {
 
     // TODO: perform animation to set up header and Logo
     // TODO: remove opaque loading elements after another timeout
-    console.debug("Timeout complete!");
+    console.debug("Timeout completed!");
     }, LOADING_ANIMATION_DELAY);
   }
 }
